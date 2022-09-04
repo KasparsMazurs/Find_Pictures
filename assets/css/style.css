@@ -1,0 +1,25 @@
+/* --------- Global style */
+
+body {
+    background-color: #e2f8d3;
+    font-family: "Satisfy", Arial;
+    color: #000000;
+    text-align: center;
+}
+
+/* --------- Game layout */
+
+.game-area {
+    background-image: url('../images/rabbit.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-sizing: border-box;
+    width: 85%;
+    height: 65vh;
+    max-height: 450px;
+    max-width: 830px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
+}
