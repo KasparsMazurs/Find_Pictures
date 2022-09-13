@@ -130,6 +130,7 @@
   }
   
   .pugs {
+    margin-top: 30px;
     align-self: flex-start;
     transform: translateY(-10px);
     transition: transform 100ms ease-in-out;
