@@ -5,18 +5,20 @@
   html {
     min-height: 100vh;
   }
-
+  
   body {
     margin: 0;
     background-color: aquamarine;
   }
-
-  .game-info-container {
-    grid-column: 1 / -1;
-    display: flex;
-    justify-content: space-between;
+  
+  .title {
+    color: #000000;
+    font-family: serif;
+    font-weight: normal;
+    text-align: center;
+    font-size: 6em;
   }
-
+  
   .game-info-container {
     grid-column: 1 / -1;
     display: flex;
@@ -25,7 +27,7 @@
   
   .game-info {
     font-family: Lunacy, serif;
-    color: black
+    color: #ff0202;
     font-size: 4em;
   }
   
@@ -37,7 +39,13 @@
     justify-content: center;
     perspective: 500px;
   }
-
+  
+  .card {
+    position: relative;
+    height: 175px;
+    width: 125px;
+  }
+  
   .card-face {
     position: absolute;
     width: 100%;
@@ -61,10 +69,6 @@
     transform: rotateY(0)
   }
   
-  .card.matched .card-value {
-    animation: dance 1s linear infinite 500ms;
-  }
-
   .overlay-text {
     display: none;
     position: fixed;
@@ -76,15 +80,61 @@
     align-items: center;
     z-index: 100;
     color: #000000;
-    font-family: Creepy, serif;
+    font-family: serif;
   }
   
   .overlay-text-small {
     font-size: .3em;
   }
   
-  .overlay-text.visible {
-    display: flex;
-    flex-direction: column;
-    animation: overlay-grow 500ms forwards;
+  @keyframes overlay-grow {
+    from {
+      background-color: rgba(0, 0, 0, 0);
+      font-size: 0;
+    }
+    to {
+      background-color: rgba(0, 0, 0, .8);
+      font-size: 10em;
+    }
+  }
+  
+  @keyframes dance {
+    0%, 100%  {
+      transform: rotate(0);
+    }
+    25% {
+      transform: rotate(-30deg);
+    }
+    75% {
+      transform: rotate(30deg);
+    }
+  }
+  
+  .card-back {
+    background-color: black;
+  }
+  
+  .card-front {
+    background-color: #FFBB89;
+    border-color: #333;
+    transform: rotateY(180deg);
+  }
+  
+  .card-value {
+    transition: transform 100ms ease-in-out;
+    transform: scale(.9);
+  }
+  
+  .card-front:hover .card-value {
+    transform: scale(1);
+  }
+  
+  .pugs {
+    align-self: flex-start;
+    transform: translateY(-10px);
+    transition: transform 100ms ease-in-out;
+  }
+  
+  .card-back:hover .pugs {
+    transform: translateY(0)
   }
