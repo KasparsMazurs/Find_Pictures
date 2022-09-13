@@ -11,4 +11,29 @@
     background-color: aquamarine;
   }
 
+  .game-info-container {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+  }
 
+  .game-info-container {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .game-info {
+    font-family: Lunacy, serif;
+    color: #FFBB89;
+    font-size: 4em;
+  }
+  
+  .game-container {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 10px;
+    margin: 50px;
+    justify-content: center;
+    perspective: 500px;
+  }
