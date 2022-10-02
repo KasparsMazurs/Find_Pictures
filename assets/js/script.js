@@ -13,4 +13,9 @@ function ready() {
             overlay.classList.remove('visible');
         });
     });
+    cards.forEach(card => {
+        card.addEventListener('click', () => {
+
+        });
+    });
 }
