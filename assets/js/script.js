@@ -7,11 +7,18 @@ if (document.readyState == 'loading') {
 function ready() {
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
     let cards = Array.from(document.getElementsByClassName('card'));
+    let game = new MixOrMatch(0, cards);
 
     overlays.forEach(overlay => {
         overlay.addEventListener('click', () => {
-            overlay.classList.remove('visible'); //Overlay text disappears
+            overlay.classList.remove('visible');
             game.startGame();
+        });
+    });
+
+    cards.forEach(card => {
+        card.addEventListener('click', () => {
+            game.flipCard(card);
         });
     });
 }
@@ -45,65 +52,82 @@ class AudioController {
     }
 }
 
-class MixOrMatch {
-
 // Sets everything for game
-constructor(totalTime, cards) {
-
-}
-
+class MixOrMatch {
+    constructor(totalTime, cards) {
+        this.cardsArray = cards;
+        this.totalTime = totalTime;
+        this.timePlayd = totalTime;
+        this.timer = document.getElementById('time')
+        this.ticker = document.getElementById('flips');
+        this.audioController = new AudioController();
+    }
 // Stars game
-startGame() {
-
-}
-
+    startGame() {
+        this.totalClicks = 0;
+        this.timePlayd = this.totalTime;
+        this.cardToCheck = null;
+        this.matchedCards = [];
+        this.busy = true;
+        setTimeout(() => {
+            this.audioController.startMusic();
+            this.shuffleCards(this.cardsArray);
+            this.countdown = this.startTime();
+            this.busy = false;
+        }, 500)
+        this.hideCards();
+        this.timer.innerText = this.timePlayd;
+        this.ticker.innerText = this.totalClicks;
+    }
 // Starts to count time  
-startTimer() {
+    startTime() {
 
-}
-
+    }
 //Victory text overlay visible
-victory() {
+    victory() {
 
-}
-
+    }
 // Hide cards after seeing them
-hideCards() {
+    hideCards() {
 
-}
-
+    }
 // Flip cards when clicked
-flipCard(card) {
+    flipCard(card) {
+        if(this.canFlipCard(card)) {
+            this.audioController.flip();
+            this.totalClicks++;
+            this.ticker.innerText = this.totalClicks;
+            card.classList.add('visible');
 
-}
-
+            if(this.cardToCheck) {
+                this.checkForCardMatch(card);
+            } else {
+                this.cardToCheck = card;
+            }
+        }
+    }
 // check if cards mach
-checkForCardMatch(card) {
-    
-}
+    checkForCardMatch(card) {
 
-// If cards match then they do not flip
-cardMatch(card1, card2) {
+    }
+// If cards match then they do not flip back
+    cardMatch(card1, card2) {
 
-}
-
+    }
 // If cards are mismatch then flip them both
-cardMismatch(card1, card2) {
+    cardMismatch(card1, card2) {
 
-}
-
+    }
 // Shuffle cards
-shuffleCards(cardsArray) {
+    shuffleCards(cardsArray) {
 
-}
-
+    }
 // Get cards
-getCardType(card) {
-
-}
-
-// Flip cards
-canFlipCard(card) {
-
-}
+    getCardType(card) {
+        return card.getElementsByClassName('card-value')[0].src;
+    }
+// Allow to Flip cards
+    canFlipCard(card) {
+        return !this.busy && !this.matchedCards.includes(card) && card !== this.cardToCheck;
+    }
 }
