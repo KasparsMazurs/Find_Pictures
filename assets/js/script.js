@@ -1,14 +1,14 @@
-if(document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', ready());
+if (document.readyState == 'loading') {
+    document.addEventListener('DOMContentLoaded', ready)
 } else {
-    ready();
+    ready()
 }
 
 function ready() {
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
-    let card = Array.from(document.getElementsByClassName('card'));
+    let cards = Array.from(document.getElementsByClassName('card'));
 
-    overlays.fromEach(overlays => {
+    overlays.forEach(overlay => {
         overlay.addEventListener('click', () => {
             overlay.classList.remove('visible');
         });
