@@ -4,6 +4,7 @@ if (document.readyState == 'loading') {
     ready()
 }
 
+// Starting game
 function ready() {
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
     let cards = Array.from(document.getElementsByClassName('card'));
@@ -20,6 +21,7 @@ function ready() {
     });
 }
 
+// Adding sounds
 class AurioC {
     constructor() {
         this.music = new Audio('../Sounds/jungle-kids-116652.mp3')
@@ -30,4 +32,26 @@ class AurioC {
         this.music.loop = true;
     }
 }
+
+// create background music
+startBGMusic() {
+    this.music.play();
+}
+stopBGMusic() {
+    this.music.pause();
+    this.music.currentTime = 0;
+}
+
+// create sound efects
+flip() {
+    this.flipSound.play();
+}
+success() {
+    this.matchSound.play();
+}
+victory() {
+    this.stopMusic();
+    this.victorySound.play();
+}
+
 let audioC = new AudioC();
