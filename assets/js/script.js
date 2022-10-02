@@ -4,7 +4,6 @@ if (document.readyState == 'loading') {
     ready()
 }
 
-// Start game
 function ready() {
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
     let cards = Array.from(document.getElementsByClassName('card'));
@@ -12,7 +11,7 @@ function ready() {
     overlays.forEach(overlay => {
         overlay.addEventListener('click', () => {
             overlay.classList.remove('visible');
+            game.startGame();
         });
     });
-
 }
