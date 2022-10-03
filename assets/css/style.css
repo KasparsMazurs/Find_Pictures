@@ -145,3 +145,11 @@
   .card-back:hover .pugs {
     transform: translateY(0)
   }
+
+  @media screen and (max-width: 1200px) {
+    .title {
+      font-size: 2em;
+    }
+    .game-info {
+      font-size: 2em;
+    } 
