@@ -111,7 +111,17 @@ class MixOrMatch {
     }
 // check if cards mach
     checkForCardMatch(card) {
+        if(this.getCardType(card) === this.getCardType(this.cardToCheck))
+            this.cardMatch(card, this.cardToCheck);
+        else 
+            this.cardMismatch(card, this.cardToCheck);
 
+        this.cardToCheck = null;        if(this.getCardType(card) === this.getCardType(this.cardToCheck))
+            this.cardMatch(card, this.cardToCheck);
+        else 
+            this.cardMismatch(card, this.cardToCheck);
+
+        this.cardToCheck = null;
     }
 // If cards match then they do not flip back
     cardMatch(card1, card2) {
