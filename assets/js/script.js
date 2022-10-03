@@ -129,7 +129,12 @@ class MixOrMatch {
     }
 // If cards are mismatch then flip them both
     cardMismatch(card1, card2) {
-
+        this.busy = true;
+        setTimeout(() => {
+            card1.classList.remove('visible');
+            card2.classList.remove('visible');
+            this.busy = false;
+        }, 1000);
     }
 // Shuffle cards
     shuffleCards(cardsArray) {
