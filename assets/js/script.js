@@ -89,7 +89,10 @@ class MixOrMatch {
     }
 // Hide cards after seeing them
     hideCards() {
-
+        this.cardsArray.forEach(card => {
+            card.classList.remove('visible');
+            card.classList.remove('matched');
+        });
     }
 // Flip cards when clicked
     flipCard(card) {
