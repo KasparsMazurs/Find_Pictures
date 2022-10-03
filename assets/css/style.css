@@ -1,4 +1,7 @@
-* {
+<!-- Google font  -->
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+*
+ {
     box-sizing: border-box;
   }
   
@@ -13,7 +16,7 @@
   
   .title {
     color: #000000;
-    font-family: serif;
+    font-family: 'Satisfy', cursive;
     font-weight: normal;
     text-align: center;
     font-size: 6em;
@@ -26,7 +29,7 @@
   }
   
   .game-info {
-    font-family: Lunacy, serif;
+    font-family: 'Satisfy', cursive;
     color: #ff0202;
     font-size: 4em;
   }
@@ -80,7 +83,7 @@
     align-items: center;
     z-index: 100;
     color: #fd0000;
-    font-family: serif;
+    font-family: 'Satisfy', cursive;
   }
   
   .overlay-text-small {
