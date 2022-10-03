@@ -85,7 +85,9 @@ class MixOrMatch {
     }
 //Victory text overlay visible
     victory() {
-
+        clearInterval(this.countdown);
+        this.audioController.victory();
+        document.getElementById('victory-text').classList.add('visible');
     }
 // Hide cards after seeing them
     hideCards() {
