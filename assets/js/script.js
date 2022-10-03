@@ -125,7 +125,13 @@ class MixOrMatch {
     }
 // If cards match then they do not flip back
     cardMatch(card1, card2) {
-
+        this.matchedCards.push(card1);
+        this.matchedCards.push(card2);
+        card1.classList.add('matched');
+        card2.classList.add('matched');
+        this.audioController.match();
+        if(this.matchedCards.length === this.cardsArray.length)
+            this.victory();
     }
 // If cards are mismatch then flip them both
     cardMismatch(card1, card2) {
