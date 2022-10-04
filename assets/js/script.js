@@ -81,7 +81,10 @@ class MixOrMatch {
     }
 // Starts to count time  
     startTime() {
-
+        return setInterval(() => {
+            this.timePlayd++;
+            this.timer.innerText = this.timePlayd;
+        }, 1000);
     }
 //Victory text overlay visible
     victory() {
