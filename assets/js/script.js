@@ -80,7 +80,7 @@ class MixOrMatch {
         this.ticker.innerText = this.totalClicks;
     }
 // Starts to count time  
-    startTime() {
+startTime() {
         return setInterval(() => {
             this.timePlayd++;
             this.timer.innerText = this.timePlayd;
