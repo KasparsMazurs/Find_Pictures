@@ -30,7 +30,7 @@ class AudioController {
         this.flipSound = new Audio('../assets/Sounds/flip.mp3');
         this.matchSound = new Audio('../assets/Sounds/Match.mp3');
         this.victorySound = new Audio('../assets/Sounds/Vistory.mp3');
-        this.bgMusic.volume = 0.5;
+        this.bgMusic.volume = 0.2;
         this.bgMusic.loop = true;
     }
     startMusic() {
