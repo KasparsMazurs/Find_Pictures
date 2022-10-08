@@ -26,10 +26,10 @@ function ready() {
 // Add/Define audio assets for game
 class AudioController {
     constructor() {
-        this.bgMusic = new Audio('find_Pictures/assets/Sounds/BG.mp3');
-        this.flipSound = new Audio('find_Pictures/assets/Sounds/flip.mp3');
-        this.matchSound = new Audio('find_Pictures/assets/Sounds/Match.mp3');
-        this.victorySound = new Audio('find_Pictures/assets/Sounds/Vistory.mp3');
+        this.bgMusic = new Audio('assets/Sounds/BG.mp3');
+        this.flipSound = new Audio('assets/Sounds/flip.mp3');
+        this.matchSound = new Audio('assets/Sounds/Match.mp3');
+        this.victorySound = new Audio('assets/Sounds/Vistory.mp3');
         this.bgMusic.volume = 0.2;
         this.bgMusic.loop = true;
     }
