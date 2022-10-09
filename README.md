@@ -1,12 +1,23 @@
-# Mr. Kris Tattoo  
+# Find Pictures  
 
-Mr. Kris Tattoo is a landing page for a self-made artist specializing in digital art and tattoos.  
+Find Pictures is a landing page for a kid's memory game in which your main task is to find two identical animal pictures as quickly as possible with the least amount of card flips possible.
 
-Users of this site will be able to find an artist portfolio and contact details.
+Playing this game kids will train their memory.
 
 This page is made using HTML, CSS and JavaScript.
 
 ![responsivedesign](assets/images/for%20readme%20file/responsive.JPG)
+
+
+
+
+
+
+
+
+
+
+
 
 ## Features
 
@@ -14,33 +25,6 @@ This page is made using HTML, CSS and JavaScript.
   - On top left corner you will find artist logo.
   - Featured on all three pages, the full responsive navigation bar includes links to the Home page, Gallery and Contact Me page and is identical in each page to allow for easy navigation. Except on the Gallery page, you will find three additional links for more convenient navigation in the gallery. 
 ![responsivedesign](assets/images/for%20readme%20file/nav.JPG)
-
-- About me
-  - In this section, you will find a short memo about an artist and his profile picture.
-![responsivedesign](assets/images/for%20readme%20file/about.JPG)
-
-- My speciality
-  - In this section, you will find in which areas artists specialize. All three pictures work as links to a specific gallery.
-![responsivedesign](assets/images/for%20readme%20file/spec.JPG)
-
-- The Footer
-  - The footer section includes links to the relevant social media sites.
-  - Footer is the same on all pages for more convenience.
-  - Artist don't have Youtube and Twitter accounts at the moment, for this reason, these links are not anchored directly to artist accounts.
-![responsivedesign](assets/images/for%20readme%20file/soc.JPG)
-
-- Gallery
-  - The gallery will provide the user with supporting images to see artist's portfolio.
-  - Graphic designs for your merchandise and Digital Artworks sections will be available in the future.
-![responsivedesign](assets/images/for%20readme%20file/gal.JPG)
-
-- Contact me
-  - In this section, you can find how you can contact artist or send email directly from the home page to the artist's email.
-![responsivedesign](assets/images/for%20readme%20file/contact.JPG)
-
-- Address 
-  - In this section, you can find saloons address where an artist is working and you will find embedded google map with the saloon location.
-![responsivedesign](assets/images/for%20readme%20file/map.JPG)
 
 ## Testing
 
