@@ -4,9 +4,12 @@ Find Pictures is a landing page for a kid's memory game in which your main task 
 
 Playing this game kids will train their memory.
 
-This page is made using HTML, CSS and JavaScript.
-
 ![responsivedesign](assets/images/Read%20me/responsive.JPG)
+
+## Languages Used
+* HTML5
+* CSS3
+* Javascript
 
 ## Features
 
@@ -40,9 +43,14 @@ This page is made using HTML, CSS and JavaScript.
 ## Deployment
 
 The site was deployed to GitHub pages. The steps to deploy are as follows:
-In the GitHub repository, navigate to the Settings tab
-From the source section drop-down menu, select the Master Branch
-Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+
+1. Log in to GitHub and locate the GitHub Repository
+2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
+3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
+4. Under "Source", click the dropdown called "None" and select "Master Branch".
+5. The page will automatically refresh.
+6. Scroll back down through the page to locate the now published site link in the "GitHub Pages" section.
+
 The live link can be found <a href="https://kasparsmazurs.github.io/Find_Pictures/" target="_blank">here</a>
 
 ## Credits
